@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <link href="./styles.css" rel="stylesheet" />
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <button onclick="sortare()" class="btn">Sortare fructe</button>
+    <script>
+        var c=myfunction(4,3);
+        document.getElementById("demo").innerHTML=c;
+        function myfunction(a,b){
+            return a*b;
+        }
+        const fructe=["mar","portocala","cirese"];
+    document.getElementById("demo1").innerHTML=fructe;
+    function sortare(){
+        fructe.sort();
+        document.getElementById("demo1").innerHTML=fructe;
+    }
+    const cars={type:"Fiat", model:"600", color:"white"};
+    document.getElementById("demo2").innerHTML="The car type is:" + cars.type;
+    let text='{"employees":['+
+    '{"firstName":"John","lastName":"Smith"},'+
+    '{"firstName":"Peter","lastName":"Pen"}'+
+    ']}';
+    const obj=JSON.parse(text);
+    document.getElementById("demo3").innerHTML=obj.employees[1].firstName+" "+obj.employees[1].lastName;
+    </script>
+    </br></br></br></br>
+    <div>
+        <h5>Username sau email:</h5>
+    <input type="text" id="text"/>
+    <p></p>
+        <h5>Introdu parola:</h5>
+    <input type="password" id="password"/>
+    <p></p>
+    <button id="mybutton" class="btn">Submit</button>
+    <script>
+        const pass=document.getElementById("password");
+        const btn=document.getElementById("mybutton")
+        btn.addEventListener('click',function(){
+            const type=pass.getAttribute('type');
+            pass.setAttribute(
+                'type',
+                type==='password' ? 'text' : 'password'
+            );
+        });
+    </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+#demo3 {
+    color: blueviolet;
+    text-align: center;
+}
+
+.btn {
+    background: url(./enter.svg);
+    background-repeat: no-repeat;
+    background-color: #0c76a0;
+    padding: 6px 30px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+#password {
+    align-self: center;
+}
+
+#text {
+    width: 100%;
+}
+
+#password {
+    width: 100%;
+}
